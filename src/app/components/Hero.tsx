@@ -37,7 +37,7 @@ export function Hero() {
             className="w-24 h-24 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary to-secondary overflow-hidden"
           >
             <div className="w-full h-full flex items-center justify-center text-white text-3xl">
-              {lang === "en" ? "M" : "孟"}
+              {lang === "en" ? "Ru" : "孟"}
             </div>
           </motion.div>
 
