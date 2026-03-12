@@ -5,14 +5,16 @@ const t = {
   en: {
     name: "Meng-Ru Lai",
     title: "Frontend Developer",
-    desc1: "Cross-disciplinary specialist in design & planning, transitioning to frontend engineering.",
-    desc2: "Passionate about merging design aesthetics, usability, and technology."
+    desc1: "Cross-disciplinary specialist in design & planning, ",
+    desc2: "transitioning to frontend engineering.",
+    desc3: "Passionate about merging design aesthetics, usability, and technology."
   },
   zh: {
     name: "賴孟孺",
     title: "Frontend Developer",
-    desc1: "跨界設計與企劃專才，正在轉職前端工程師的路上",
-    desc2: "熱衷於將設計美學、易用性與技術完美結合"
+    desc1: "跨界設計與企劃專才，",
+    desc2: "正在轉職前端工程師的路上",
+    desc3: "熱衷於將設計美學、易用性與技術完美結合"
   }
 };
 
@@ -59,7 +61,8 @@ export function Hero() {
             className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
           >
             {text.desc1}<br />
-            {text.desc2}
+            {text.desc2}<br />
+            {text.desc3}
           </motion.p>
         </motion.div>
       </div>

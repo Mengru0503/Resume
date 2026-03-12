@@ -19,7 +19,7 @@ const socialLinks = [
   {
     icon: Mail,
     label: "Email",
-    href: "mailto:mengru@example.com",
+    href: "mailto:mengru0503@gmail.com",
     color: "#C8B8A8"
   }
 ];
@@ -98,7 +98,7 @@ export function Contact() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-muted-foreground"
           >
-            <p className="mb-2">mengru@example.com</p>
+            <p className="mb-2">mengru0503@gmail.com</p>
             <p>{text.location}</p>
           </motion.div>
         </motion.div>
