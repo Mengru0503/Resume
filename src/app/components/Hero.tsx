@@ -130,8 +130,9 @@ export function Hero() {
 
             {/* Download Resume */}
             <a
-              href="#"
+              href="https://mengru0503.github.io/ResumePDF/"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border transition-all duration-300 hover:scale-105 hover:shadow-md"
+              target="_blank"
               style={{
                 borderColor: "var(--border)",
                 color: "var(--muted-foreground)"
