@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useInView } from "./useInView";
 import { useLanguage } from "./LanguageContext";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Github } from "lucide-react";
 
 const socialLinks = [
   {
@@ -9,12 +9,6 @@ const socialLinks = [
     label: "GitHub",
     href: "https://github.com/Mengru0503",
     color: "#9EAFC4"
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "#",
-    color: "#D4A5A5"
   },
   {
     icon: Mail,
@@ -63,7 +57,7 @@ export function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-card rounded-2xl p-6 md:p-12 shadow-lg border border-border mb-12"
           >
-            <div className="grid grid-cols-3 gap-6 md:gap-8 max-w-md mx-auto">
+            <div className="flex justify-center gap-12 md:gap-16 max-w-md mx-auto">
               {socialLinks.map((link, index) => {
                 const Icon = link.icon;
                 return (

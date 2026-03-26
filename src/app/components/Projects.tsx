@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { motion } from "motion/react";
 import { useInView } from "./useInView";
 import { useLanguage } from "./LanguageContext";
@@ -68,6 +69,7 @@ const projects = [
     color: "#9EAFC4",
     category: "team"
   },
+
   {
     title: { en: "Happiness Cookie", zh: "晴天餅乾 Happiness Cookie" },
     description: {
@@ -125,23 +127,23 @@ const projects = [
     category: "react"
   },
   {
-    title: { en: "URBNSTEP Shoes E‑Commerce", zh: "URBNSTEP 鞋類電商網站" },
+    title: { en: "URBNSTEP Shoes E-Commerce", zh: "URBNSTEP 鞋類電商網站" },
     description: {
-      en: "A shoe brand e-commerce website with product listing pages and responsive layout design.",
-      zh: "鞋類品牌電商網站，包含商品列表頁與響應式版面設計。"
+      en: "URBNSTEP is a street-style functional shoe brand from Taiwan, blending urban aesthetics with functionality to deliver a stylish e-commerce experience.",
+      zh: "不僅是鞋履，更是與城市連結的語言。這是來自台灣的街頭機能鞋品牌「URBNSTEP」，融合城市結構與機能語彙，打造風格與功能並存的購物體驗。"
     },
     features: {
       en: [
-        "Product listing & detail pages",
-        "Responsive layout (RWD)",
-        "Vanilla JS interaction patterns",
-        "Modern frontend UI structure"
+        "Product catalog & brand story",
+        "Responsive web design (RWD)",
+        "Vanilla JS interactions",
+        "Modern street-style aesthetics"
       ],
       zh: [
-        "商品列表與詳情頁",
-        "響應式版面設計（RWD）",
-        "原生 JS 互動模式",
-        "現代前端 UI 結構"
+        "商品列表與完整的品牌故事頁面",
+        "跨裝置的 RWD 響應式佈局設計",
+        "流暢的原生 JS 互動體驗",
+        "高品質街頭視覺美學呈現"
       ]
     },
     tags: ["HTML", "CSS", "JavaScript", "RWD"],

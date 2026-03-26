@@ -101,12 +101,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-4"
+            className="flex flex-col md:flex-row items-center justify-center gap-4 w-full md:w-auto"
           >
             {/* View Projects */}
             <button
               onClick={scrollToProjects}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+              className="w-full md:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-white transition-all duration-300 md:hover:scale-105 md:hover:shadow-lg cursor-pointer"
               style={{ backgroundColor: "var(--primary)" }}
             >
               <FolderOpen size={16} />
@@ -118,7 +118,7 @@ export function Hero() {
               href="https://github.com/Mengru0503"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border transition-all duration-300 hover:scale-105 hover:shadow-md"
+              className="w-full md:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border transition-all duration-300 md:hover:scale-105 md:hover:shadow-md"
               style={{
                 borderColor: "var(--primary)",
                 color: "var(--primary)"
@@ -131,7 +131,7 @@ export function Hero() {
             {/* Download Resume */}
             <a
               href="https://mengru0503.github.io/ResumePDF/"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border transition-all duration-300 hover:scale-105 hover:shadow-md"
+              className="w-full md:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border transition-all duration-300 md:hover:scale-105 md:hover:shadow-md"
               target="_blank"
               style={{
                 borderColor: "var(--border)",
