@@ -5,23 +5,23 @@ import { useLanguage } from "./LanguageContext";
 const t = {
   en: {
     heading: "About Me",
-    p1: "I'm Meng-Ru Lai, with years of hands-on experience in marketing planning and multimedia design. I'm actively transitioning to become a frontend engineer, combining cross-disciplinary strengths that merge design aesthetics with technical development.",
-    p2: "From the Junior Chamber International to the Chinese Young Entrepreneurs Association and nonprofit organizations, I've accumulated rich experience in project planning, management, and cross-department coordination. These soft skills allow me to bring unique value to frontend development teams.",
-    p3: "I'm passionate about UI/UX and engineering integration. Currently focused on learning React, JavaScript, and web architecture, I'm dedicated to building digital products that balance beauty with great user experience.",
+    p1: "Frontend developer with a background in marketing and multimedia design.",
+    p2: "Experienced in building responsive web interfaces and interactive UI experiences.",
+    p3: "Currently focusing on modern frontend development using React.",
     infoTitle: "Professional Info",
     targetLabel: "Target Role",
     targetValue: "Frontend Developer",
     bgLabel: "Background",
-    bgValue: "Marketing Planning & Multimedia Design",
+    bgValue: "Marketing & Multimedia Design",
     locationLabel: "Location",
     locationValue: "Taiwan",
     githubLabel: "GitHub"
   },
   zh: {
     heading: "關於我",
-    p1: "我是賴孟孺，擁有多年行銷企劃與多媒體設計的實戰經驗，目前正積極轉職成為前端工程師。綜合跨界整合的獨特優勢，我能將設計美學與技術開發完美融合。",
-    p2: "從國際青年商會到中華青年企業家協會，再到公益組織，我累積了豐富的企劃執行、專案管理與跨部門協調經驗。這些軟實力讓我在前端開發團隊中也能發揮獨特的價值。",
-    p3: "我熱衷於 UI/UX 與工程整合，目前專注學習 React、JavaScript 與 Web 架構，致力於打造兼具美感與使用體驗的數位產品。",
+    p1: "前端工程師，具備行銷企劃與多媒體設計背景。",
+    p2: "擅長打造響應式網頁介面與互動式 UI 體驗。",
+    p3: "目前專注於使用 React 進行現代前端開發。",
     infoTitle: "專業資訊",
     targetLabel: "目標職位",
     targetValue: "Frontend Developer",
@@ -50,16 +50,10 @@ export function About() {
           <h2 className="text-4xl md:text-5xl mb-12 text-center">{text.heading}</h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                {text.p1}
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                {text.p2}
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                {text.p3}
-              </p>
+            <div className="space-y-4">
+              <p className="text-lg leading-relaxed text-muted-foreground">{text.p1}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{text.p2}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{text.p3}</p>
             </div>
 
             <motion.div
@@ -85,7 +79,12 @@ export function About() {
                 <div>
                   <div className="text-sm text-muted-foreground mb-1">{text.githubLabel}</div>
                   <div className="text-lg">
-                    <a href="https://github.com/Mengru0503" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    <a
+                      href="https://github.com/Mengru0503"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
                       Mengru0503
                     </a>
                   </div>

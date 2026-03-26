@@ -1,26 +1,33 @@
 import { motion } from "motion/react";
 import { useLanguage } from "./LanguageContext";
+import { Github, FileDown, FolderOpen } from "lucide-react";
+
+const techStack = ["HTML", "CSS", "JavaScript", "React"];
 
 const t = {
   en: {
-    name: "Meng-Ru Lai",
+    name: "Mengru Lai",
     title: "Frontend Developer",
-    desc1: "Cross-disciplinary specialist in design & planning, ",
-    desc2: "transitioning to frontend engineering.",
-    desc3: "Passionate about merging design aesthetics, usability, and technology."
+    tagline: "Building interactive web interfaces and user-centered web experiences.",
+    viewProjects: "View Projects",
+    resume: "Download Resume"
   },
   zh: {
     name: "賴孟孺",
     title: "Frontend Developer",
-    desc1: "跨界設計與企劃專才，",
-    desc2: "正在轉職前端工程師的路上",
-    desc3: "熱衷於將設計美學、易用性與技術完美結合"
+    tagline: "打造互動式網頁介面與以使用者為中心的 Web 體驗。",
+    viewProjects: "查看作品",
+    resume: "下載履歷"
   }
 };
 
 export function Hero() {
   const { lang } = useLanguage();
   const text = t[lang];
+
+  const scrollToProjects = () => {
+    document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6 py-20 bg-card/30">
@@ -30,6 +37,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
+          {/* Avatar */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -41,29 +49,98 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl mb-6 text-foreground">
+          {/* Name */}
+          <h1 className="text-5xl md:text-7xl mb-4 text-foreground">
             {text.name}
           </h1>
 
+          {/* Title */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-4"
+            className="text-xl md:text-2xl text-primary mb-4 tracking-wide"
           >
             {text.title}
           </motion.p>
 
+          {/* Tagline */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            transition={{ delay: 0.55, duration: 0.8 }}
+            className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed mb-8"
           >
-            {text.desc1}<br />
-            {text.desc2}<br />
-            {text.desc3}
+            {text.tagline}
           </motion.p>
+
+          {/* Tech Stack Badges */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-2 mb-10"
+          >
+            {techStack.map((tech, i) => (
+              <span
+                key={tech}
+                className="px-4 py-1.5 rounded-full text-sm font-medium border"
+                style={{
+                  borderColor: "var(--primary)",
+                  color: "var(--primary)",
+                  backgroundColor: "var(--primary)18"
+                }}
+              >
+                {tech}
+              </span>
+            ))}
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.85, duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            {/* View Projects */}
+            <button
+              onClick={scrollToProjects}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+              style={{ backgroundColor: "var(--primary)" }}
+            >
+              <FolderOpen size={16} />
+              {text.viewProjects}
+            </button>
+
+            {/* GitHub */}
+            <a
+              href="https://github.com/Mengru0503"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border transition-all duration-300 hover:scale-105 hover:shadow-md"
+              style={{
+                borderColor: "var(--primary)",
+                color: "var(--primary)"
+              }}
+            >
+              <Github size={16} />
+              GitHub
+            </a>
+
+            {/* Download Resume */}
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border transition-all duration-300 hover:scale-105 hover:shadow-md"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--muted-foreground)"
+              }}
+            >
+              <FileDown size={16} />
+              {text.resume}
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>
